@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"
+              android:background="#fff"
+              android:gravity="center"
+              android:orientation="vertical" android:id="@+id/linearLayout">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+        <View
+                android:layout_marginTop="4dp"
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="0.2dp"
+                android:background="#000" tools:ignore="MissingConstraints"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="24dp"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="24dp"
+                app:layout_constraintTop_toBottomOf="@+id/textview_cases"/>
+
+        <TextView
+                android:id="@+id/Num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/view1"
+        />
+
+        <TextView
+                android:id="@+id/Deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textview_death"
+                app:layout_constraintStart_toStartOf="@+id/textview_death"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/view1"
+        />
+        <TextView
+                android:id="@+id/TodayDeaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textview_death"
+                app:layout_constraintStart_toStartOf="@+id/textview_death"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/Deaths"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+                android:id="@+id/TodayCases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textview_cases"
+                app:layout_constraintStart_toStartOf="@+id/textview_cases"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/Deaths"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+        />
+        <TextView
+                android:id="@+id/TodayRecovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textview_wyzdrowiałych"
+                app:layout_constraintStart_toStartOf="@+id/textview_wyzdrowiałych"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/Deaths"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+        />
+        <TextView
+                android:id="@+id/Recovered"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/textview_wyzdrowiałych"
+                app:layout_constraintStart_toStartOf="@+id/textview_wyzdrowiałych"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/view1"
+        />
+        <TextView
+                android:id="@+id/Country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:layout_marginTop="4dp"
+                android:textStyle="bold"
+                android:textSize="26sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+                android:id="@+id/textview_cases"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zainfekowane"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/Country"/>
+        <TextView
+                android:id="@+id/textview_wyzdrowiałych"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wyzdrowiałe"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/Country"
+                app:layout_constraintStart_toEndOf="@+id/textview_cases" android:layout_marginStart="8dp"/>
+        <TextView
+                android:id="@+id/textview_death"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Zmarłe"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Country" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/textview_cases"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="#000"/>
+
+</LinearLayout>
